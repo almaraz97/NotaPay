@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { CopyIcon } from "./assets/CopyIcon";
-import { DiamondIcon } from "./assets/DiamondIcon";
-import { HareIcon } from "./assets/HareIcon";
-import { ArrowSmallRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 // Need to load module settings and make forms for that module's abi.decode()
@@ -12,12 +9,12 @@ export const TransferInteraction = () => {
   const [newFrom, setNewFrom] = useState("0x000000000000000000");
   const [newTo, setNewTo] = useState("0x000000000000000000");
   const [newNotaId, setNewNotaId] = useState(BigInt(0));
-  const [newModuleData, setNewModuleData] = useState("" as `0x${string}`);
-  
+  // const [newModuleData, setNewModuleData] = useState("" as `0x${string}`);
+
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "NotaRegistrar",
-    functionName: "safeTransferFrom",
-    args: [newFrom, newTo, newNotaId, newModuleData],
+    functionName: "transferFrom",
+    args: [newFrom, newTo, newNotaId],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
     },
@@ -43,7 +40,7 @@ export const TransferInteraction = () => {
             <XMarkIcon className="h-4 w-4" />
           </button>
         </div> */}
-        
+
         <div className="flex flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary">
           <span className="text-4xl sm:text-6xl text-black">Transfer a Nota</span>
           <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-5">
@@ -75,7 +72,7 @@ export const TransferInteraction = () => {
               type="text"
               placeholder="Hook Data"
               className="input font-bai-jamjuree w-full px-5 bg-[url('/assets/gradient-bg.png')] bg-[length:100%_100%] border border-primary text-lg sm:text-2xl placeholder-white uppercase"
-              onChange={e => setNewModuleData(e.target.value as `0x${string}`)}
+              onChange={e => e.target.value as `0x${string}`}
             />
             <div className="flex rounded-full border border-primary p-1 flex-shrink-0">
               <div className="flex rounded-full border-2 border-primary p-1">
