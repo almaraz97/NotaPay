@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             smart, programmable assets. That world is here. Welcome to NotaPay 😎
           </p>
           <h4 className="text-center mb-4">
-            <span className="block text-2xl font-bold">How it works</span>
+            <span className="block text-2xl font-bold">🤔 How it works 🤔</span>
           </h4>
           <p className="text-left text-lg">
             When you send a payment with NotaPay, a payment NFT is sent to the recipient as a claim for the escrowed
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
             recieve/release funds.
           </p>
           <h4 className="text-center mb-4">
-            <span className="block text-2xl font-bold">Benefits</span>
+            <span className="block text-2xl font-bold">✨ Benefits ✨</span>
           </h4>
           <div>
             <li className="text-left text-lg">
