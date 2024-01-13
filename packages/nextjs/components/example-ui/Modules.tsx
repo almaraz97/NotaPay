@@ -131,7 +131,7 @@ export const Modules = () => {
             <div className="px-2 pb-1 flex items-end">Types: {modules[key].writeByteTypes}</div>
           </div>
           <div className="mt-0 flex items-end justify-between">
-            <div className="px-2 pb-1 flex items-end">Names: {modules[key].writeByteNames}</div>
+            <div className="px-2 pb-1 flex items-end">Values: {modules[key].writeByteNames}</div>
           </div>
         </div>
       ))}
