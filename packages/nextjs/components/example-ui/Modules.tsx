@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import moduleMappings from "../ModuleMappings.json";
 import Marquee from "react-fast-marquee";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import {
   // useAnimationConfig,
   // useScaffoldContractRead,
@@ -113,15 +114,25 @@ export const Modules = () => {
           <div className="mt-3 flex items-end justify-between">
             <div className="p-2 py-1 flex items-end">Description: {modules[key].description}</div>
           </div>
-          <a
-            href="https://www.moesif.com/solidity-abi-hex-decoder/encode"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-2"
-          >
-            Hook Write Formatting:{" "}
-          </a>
-          <div>{modules[key].writeBytes}</div>
+          <div className="mt-3 flex items-end justify-between">
+            <div className="p-2 py-0 flex items-end">Address: {modules[key].address}</div>
+          </div>
+          <div className="mt-3 flex items-end justify-between">
+            <a
+              href="https://www.moesif.com/solidity-abi-hex-decoder/encode"
+              target="_blank"
+              rel="noreferrer"
+              className="underline px-2 pt-1 pb-0 flex items-end"
+            >
+              Hook Write Data Formatting <ArrowTopRightOnSquareIcon className="inline-block h-5 w-5 pb-1" />
+            </a>
+          </div>
+          <div className="mt-0 flex items-end justify-between">
+            <div className="px-2 pb-1 flex items-end">Types: {modules[key].writeByteTypes}</div>
+          </div>
+          <div className="mt-0 flex items-end justify-between">
+            <div className="px-2 pb-1 flex items-end">Names: {modules[key].writeByteNames}</div>
+          </div>
         </div>
       ))}
     </div>
