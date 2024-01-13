@@ -2,7 +2,14 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Bars3Icon, PencilSquareIcon, PaperAirplaneIcon, BanknotesIcon, ArrowDownOnSquareStackIcon, ArrowUturnUpIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownOnSquareStackIcon,
+  ArrowUturnUpIcon,
+  BanknotesIcon,
+  Bars3Icon,
+  PaperAirplaneIcon,
+  PencilSquareIcon,
+} from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -96,7 +103,7 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6">
           <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/DenotaLogo.svg" />
+            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">NotaPay</span>

@@ -16,7 +16,7 @@ const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT
 export const MetaHeader = ({
   title = "NotaPay | The Future of Crypto Payments",
   description = "Easily send programmable crypto payments that enhance trust, transparency, and fun!",
-  image = "DenotaLogo.svg",
+  image = "logo.svg",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {
