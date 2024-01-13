@@ -2,20 +2,20 @@ import { useState } from "react";
 // import { CopyIcon } from "./assets/CopyIcon";
 // import { DiamondIcon } from "./assets/DiamondIcon";
 // import { HareIcon } from "./assets/HareIcon";
-import { ArrowSmallRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 // Need to load module settings and make forms for that module's abi.decode()
 export const WriteInteraction = () => {
-  const [visible, setVisible] = useState(true);
+  // const [visible, setVisible] = useState(true);
 
-  const [newCurrency, setNewCurrency] = useState("0x000000000000000000");  // Write argument parameters
+  const [newCurrency, setNewCurrency] = useState("0x000000000000000000"); // Write argument parameters
   const [newEscrow, setNewEscrow] = useState(BigInt(0));
   const [newInstant, setNewInstant] = useState(BigInt(0));
   const [newOwner, setNewOwner] = useState("0x000000000000000000");
   const [newModule, setNewModule] = useState("0x000000000000000000");
   const [newModuleData, setNewModuleData] = useState("" as `0x${string}`);
-  
+
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "NotaRegistrar",
     functionName: "write",
@@ -105,7 +105,8 @@ export const WriteInteraction = () => {
     </div>
   );
 };
-        {/* <div className={`mt-10 flex gap-2 ${visible ? "" : "invisible"} max-w-2xl`}>
+{
+  /* <div className={`mt-10 flex gap-2 ${visible ? "" : "invisible"} max-w-2xl`}>
           <div className="flex gap-5 bg-base-200 bg-opacity-80 z-0 p-7 rounded-2xl shadow-lg">
             <span className="text-3xl">👋🏻</span>
             <div>
@@ -121,4 +122,5 @@ export const WriteInteraction = () => {
           >
             <XMarkIcon className="h-4 w-4" />
           </button>
-        </div> */}
+        </div> */
+}

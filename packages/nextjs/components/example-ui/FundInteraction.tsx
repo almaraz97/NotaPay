@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { CopyIcon } from "./assets/CopyIcon";
-import { DiamondIcon } from "./assets/DiamondIcon";
-import { HareIcon } from "./assets/HareIcon";
-import { ArrowSmallRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 // Need to load module settings and make forms for that module's abi.decode()
@@ -13,7 +10,7 @@ export const FundInteraction = () => {
   const [newEscrow, setNewEscrow] = useState(BigInt(0));
   const [newInstant, setNewInstant] = useState(BigInt(0));
   const [newModuleData, setNewModuleData] = useState("" as `0x${string}`);
-  
+
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "NotaRegistrar",
     functionName: "fund",
@@ -44,7 +41,7 @@ export const FundInteraction = () => {
             <XMarkIcon className="h-4 w-4" />
           </button>
         </div> */}
-        
+
         <div className="flex flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary">
           <span className="text-4xl sm:text-6xl text-black">Fund a Nota</span>
 
