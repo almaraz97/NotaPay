@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
-import { useAccount } from "wagmi";
 import {
   useAnimationConfig,
   useScaffoldContract,
   useScaffoldContractRead,
-  useScaffoldEventHistory,
-  useScaffoldEventSubscriber,
+  // useScaffoldEventHistory,
+  // useScaffoldEventSubscriber,
 } from "~~/hooks/scaffold-eth";
 
 const MARQUEE_PERIOD_IN_SEC = 5;
 
 export const ContractData = () => {
-  const { address } = useAccount();
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [isRightDirection, setIsRightDirection] = useState(false);
   const [marqueeSpeed, setMarqueeSpeed] = useState(0);

@@ -14,9 +14,9 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "Denota Protocol",
+  title = "NotaPay | The future of crypto payments",
   description = "Built with 🏗 Scaffold-ETH 2",
-  image = "thumbnail.jpg",
+  image = "DenotaLogo.svg",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {

@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import moduleMappings from "../ModuleMappings.json";
 import {
-  useAnimationConfig,
-  useScaffoldContractRead,
+  // useAnimationConfig,
+  // useScaffoldContractRead,
   useScaffoldEventHistory,
-  useScaffoldEventSubscriber,
+  // useScaffoldEventSubscriber,
 } from "~~/hooks/scaffold-eth";
 
   //// useScaffoldEventSubscriber({
@@ -31,9 +31,9 @@ interface NotaObject {
 }
 
 export const Modules = () => {  
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
-  const [isRightDirection, setIsRightDirection] = useState(false);
-  const [marqueeSpeed, setMarqueeSpeed] = useState(0);
+  // const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const [isRightDirection, ] = useState(false);
+  const [marqueeSpeed, ] = useState(0);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -43,8 +43,6 @@ export const Modules = () => {
   */
   const {
     data: myNotaEvents,
-    isLoading: isLoadingEvents,
-    error: errorReadingEvents,
   } = useScaffoldEventHistory({
     contractName: "NotaRegistrar",
     eventName: "Written",
@@ -73,7 +71,7 @@ export const Modules = () => {
   return (
     <div className="grid grid-cols-3 gap-5 bg-[url('/assets/gradient-bg.png')] bg-[length:100%_100%] py-10 px-5 sm:px-0 lg:py-auto max-w-[100vw] ">
       {Object.keys(modules).map((key) => (
-        <div
+        <div key={key}
             className={`max-w-md bg-base-200 bg-opacity-70 rounded-2xl shadow-lg px-5 mx-20 py-4 w-full ${
               showAnimation ? "animate-zoom" : ""
             }`}

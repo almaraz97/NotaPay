@@ -1,6 +1,6 @@
-import Link from "next/link";
+// import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
+// import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 
 const Home: NextPage = () => {
@@ -14,10 +14,7 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Denota Protocol</span>
           </h1>
           <p className="text-center text-lg">
-          The future of programmable crypto payments! 
-          Imagine a world where your payments aren't just transactions, but smart, programmable assets. 
-          From trustless betting to reversibility and multi-step payments, Denota's Nota NFTs revolutionize how you send funds. 
-          With Denota, each payment is an NFT, capable of carrying custom rules and data for your unique needs. They're not just payments; they're fully onchain, extensible, composable, and transferable payment agreements. Explore our simple yet powerful payment hooks to deploy your own and start generating revenue!
+          The future of programmable crypto payments! Imagine a world where your payments arent just transactions, but smart, programmable assets. From trustless betting to reversibility and multi-step payments, Denotas Nota NFTs revolutionize how you send funds. With Denota, each payment is an NFT, capable of carrying custom rules and data for your unique needs. Theyre not just payments; theyre fully onchain, extensible, composable, and transferable payment agreements. Explore our simple yet powerful payment hooks to deploy your own and start generating revenue!
           </p>
         </div>
 
