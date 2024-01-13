@@ -19,5 +19,89 @@
              }
           ]
        }
-    }
+    },
+    "bytecode2":{
+      "name":"Simple Cash",
+      "description":"Enables two-step payments much like a cheque that needs to be cashed by the owner. Documents and an image can be attached as well.",
+      "address": "TBD",
+      "writeByteTypes":"String, String",
+      "writeByteNames":"External URL, Image URL",
+      "decodeNeeded":true,
+      "decode":{
+         "write":[
+            {
+               "address":"inspector"
+            },
+            {
+               "string":"external_url"
+            },
+            {
+               "string":"imageURI"
+            }
+         ]
+      }
+   },
+   "bytecode3":{
+      "name":"Conditional Release",
+      "description":"Allows minters to send Notas that can only be cashed if the specified threshold is greater than the specified smart contract variable. The owner has until the threshold time this opportunity after which the sender can claw back the funds.",
+      "address": "TBD",
+      "writeByteTypes":"String, String",
+      "writeByteNames":"External URL, Image URL",
+      "decodeNeeded":true,
+      "decode":{
+         "write":[
+            {
+               "address":"inspector"
+            },
+            {
+               "string":"external_url"
+            },
+            {
+               "string":"imageURI"
+            }
+         ]
+      }
+   },
+   "bytecode4":{
+      "name":"Conditional Release",
+      "description":"Allows minters to send Notas that can only be cashed if the specified threshold is greater than the specified smart contract variable. Documents and an Image can be attached",
+      "address": "TBD",
+      "writeByteTypes":"address, bytes4, uint256, string, string",
+      "writeByteNames":"Smart Contract Address, Contract Function, Threshold Number, ExternalURL, ImageURL",
+      "decodeNeeded":true,
+      "decode":{
+         "write":[
+            {
+               "address":"inspector"
+            },
+            {
+               "string":"external_url"
+            },
+            {
+               "string":"imageURI"
+            }
+         ]
+      }
+   },
+   "bytecode5":{
+      "name":"Conditional Release Expiry",
+      "description":"Allows minters to send Notas that can only be cashed if the specified threshold is greater than the specified smart contract variable. The owner has until the threshold time this opportunity after which the sender can claw back the funds. Documents and an Image can be attached",
+      "address": "TBD",
+      "writeByteTypes":"address, bytes4, uint256, uint256, string, string",
+      "writeByteNames":"Smart Contract Address, Contract Function, Threshold Number, Expiration Date, ExternalURL, ImageURL",
+      "decodeNeeded":true,
+      "decode":{
+         "write":[
+            {
+               "address":"inspector"
+            },
+            {
+               "string":"external_url"
+            },
+            {
+               "string":"imageURI"
+            }
+         ]
+      }
+   }
 }

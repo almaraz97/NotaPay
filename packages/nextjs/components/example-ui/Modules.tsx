@@ -74,7 +74,7 @@ export const Modules = () => {
       {Object.keys(modules).map(key => (
         <div
           key={key}
-          className={`max-w-md bg-base-200 bg-opacity-70 rounded-2xl shadow-lg px-5 mx-20 py-4 w-full ${
+          className={`max-w-md bg-base-200 bg-opacity-70 rounded-2xl shadow-lg px-5 mx-2 py-4 w-full ${
             showAnimation ? "animate-zoom" : ""
           }`}
         >
