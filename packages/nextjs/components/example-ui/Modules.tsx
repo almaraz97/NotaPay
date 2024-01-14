@@ -81,7 +81,10 @@ export const Modules = () => {
           {/* Top half of the box */}
           <div className="flex justify-between w-full">
             <h1 className="text-center mb-0 float-bottom">
-              <span className="block text-2xl">{modules[key].name}</span>
+              <span className="block text-2xl">
+                {modules[key].name}
+                <ArrowTopRightOnSquareIcon className="inline-block h-5 w-5 pb-1" />
+              </span>
             </h1>
 
             {/* Counter box */}
@@ -112,9 +115,9 @@ export const Modules = () => {
           </div>
           {/* Bottom half of box */}
           <div className="mt-3 flex items-end justify-between">
-            <div className="p-2 py-1 flex items-end">Description: {modules[key].description}</div>
+            <div className="p-2 py-1 flex items-end">{modules[key].description}</div>
           </div>
-          <div className="mt-3 flex items-end justify-between">
+          {/* <div className="mt-3 flex items-end justify-between">
             <div className="p-2 py-0 flex items-end">Address: {modules[key].address}</div>
           </div>
           <div className="mt-3 flex items-end justify-between">
@@ -132,7 +135,7 @@ export const Modules = () => {
           </div>
           <div className="mt-0 flex items-end justify-between">
             <div className="px-2 pb-1 flex items-end">Values: {modules[key].writeByteNames}</div>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>
