@@ -20,6 +20,27 @@
           ]
        }
     },
+    "bytecode4":{
+      "name":"Reversible Timelock Release",
+      "description":"The payer can choose an 'inspector' address which is allowed to release the escrowed amount to the owner OR back to the payer. If the timelock release date passes only the owner has right to cash. Documents and an Image can be attached",
+      "address": "TBD",
+      "writeByteTypes":"Address, uint256, String, String",
+       "writeByteNames":"Inspector Address, Timelock Release, External URL, Image URL",
+      "decodeNeeded":true,
+      "decode":{
+         "write":[
+            {
+               "address":"inspector"
+            },
+            {
+               "string":"external_url"
+            },
+            {
+               "string":"imageURI"
+            }
+         ]
+      }
+   },
     "bytecode2":{
       "name":"Simple Cash",
       "description":"Enables two-step payments much like a cheque that needs to be cashed by the owner. Documents and an image can be attached as well.",
@@ -47,27 +68,6 @@
       "address": "TBD",
       "writeByteTypes":"String, String",
       "writeByteNames":"External URL, Image URL",
-      "decodeNeeded":true,
-      "decode":{
-         "write":[
-            {
-               "address":"inspector"
-            },
-            {
-               "string":"external_url"
-            },
-            {
-               "string":"imageURI"
-            }
-         ]
-      }
-   },
-   "bytecode4":{
-      "name":"Conditional Release",
-      "description":"Allows minters to send Notas that can only be cashed if the specified threshold is greater than the specified smart contract variable. Documents and an Image can be attached",
-      "address": "TBD",
-      "writeByteTypes":"address, bytes4, uint256, string, string",
-      "writeByteNames":"Smart Contract Address, Contract Function, Threshold Number, ExternalURL, ImageURL",
       "decodeNeeded":true,
       "decode":{
          "write":[
